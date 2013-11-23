@@ -12,5 +12,9 @@ Puppet::Type.newtype(:smb_user) do
     validate do |value|
       fail("Password should be at least 3 characters") unless value =~ /^...+$/
     end
+    munge do |value|
+      cmd = "printf '" + value  + "' | iconv -f ASCII -t UTF-16LE | openssl dgst -md4 | tr '[:lower:]' '[:upper:]' | cut -d ' ' -f2"
+      exec( cmd )
+    end
   end
 end

@@ -5,7 +5,7 @@ class samba::params {
       $service_name = 'samba'
     }
     default: {
-      $service_name = [ 'smb', 'nmb']
+      $service_name = 'smb'
     }
   }
   $ensure = 'running'
