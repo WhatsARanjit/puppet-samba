@@ -5,8 +5,7 @@ Puppet::Type.newtype(:smb_share) do
   newparam(:path, :namevar => true) do
     desc 'The location of a samba share'
     validate do |value|
-      unless Pathname.new(value).absolute?
-        fail("Invalid path #{value}")
+      fail("Invalid path #{value}") unless Pathname.new(value).absolute?
     end
   end
   newproperty(:comment) do
@@ -33,12 +32,6 @@ Puppet::Type.newtype(:smb_share) do
   newproperty(:share_modes) do
     newvalue(:yes)
     newvalue(:no)
-  end
-  newproperty(:public) do
-    newvalue(:yes)
-    newvalue(:no)
-  end
-  newproperty(:write_list) do
   end
   newproperty(:public) do
     newvalue(:yes)
