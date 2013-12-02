@@ -13,13 +13,14 @@ Puppet::Type.type(:smb_share).provide(:smb_share) do
 
   def create
     output = "\n[#{resource[:share]}]\n"
-    resource.each do |k,v|
+    resource[].each do |k,v|
       output << "#{k} = #{v}\n" unless k == :share
     end
     output << "# END #{resource[:share]} #"
     echo("-e", "\"" + output + "\"", ">>", "/etc/samba/smbpasswd")
   end
 
+  # Might need to create my own resource hash
   resource.each do |k,v|
     param = k.to_s
     def k
