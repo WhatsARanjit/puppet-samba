@@ -74,10 +74,10 @@
 	workgroup = <%= @workgroup %>
 	server string = <%= @server_string %>
 	
-<% if @netbios_name %>  netbios name = <%= @netbios_name %><% end -%>
+<% if @netbios_name %>  netbios name = <%= @netbios_name %><% end %>
 	
-<% if @interfaces %>  interfaces = <%= @interfaces %><% end -%>
-<% if @hosts_allow %>  hosts_allow = <%= @hosts_allow %><% end -%>
+<% if @interfaces %>  interfaces = <%= @interfaces %><% end %>
+<% if @hosts_allow %>  hosts_allow = <%= @hosts_allow %><% end %>
 	
 # --------------------------- Logging Options -----------------------------
 #
@@ -123,9 +123,9 @@
 	
 ;	security = domain
 ;	passdb backend = tdbsam
-<% if @realm %>  realm = <%= @realm %><% end -%>
+<% if @realm %>  realm = <%= @realm %><% end %>
 
-<% if @password_server %>  password_server = <%= @password_server %><% end -%>
+<% if @password_server %>  password_server = <%= @password_server %><% end %>
 
 # ----------------------- Domain Controller Options ------------------------
 #
@@ -150,18 +150,18 @@
 # machine to add or delete corresponding unix accounts
 #
 	
-<% if @domain_master %>  domain_master = <%= @domain_master %><% end -%>
-<% if @domain_logons %>  domain_logons = <%= @domain_logons %><% end -%>
+<% if @domain_master %>  domain_master = <%= @domain_master %><% end %>
+<% if @domain_logons %>  domain_logons = <%= @domain_logons %><% end %>
 	
-<% if @logon_script %>  logon_script = <%= @logon_script %><% end -%>
-<% if @logon_path %>  logon_path = <%= @logon_path %><% end -%>
+<% if @logon_script %>  logon_script = <%= @logon_script %><% end %>
+<% if @logon_path %>  logon_path = <%= @logon_path %><% end %>
 	
-<% if @add_user_script %>  add_user_script = <%= @add_user_script %><% end -%>
-<% if @add_group_script %>  add_group_script = <%= @add_group_script %><% end -%>
-<% if @add_machine_script %>  add_machine_script = <%= @add_machine_script %><% end -%>
-<% if @delete_user_script %>  delete_user_script = <%= @delete_user_script %><% end -%>
-<% if @delete_group_script %>  delete_group_script = <%= @delete_group_script %><% end -%>
-<% if @delete_user_from_group_script %>  delete_user_from_group_script = <%= @delete_user_from_group_script %><% end -%>
+<% if @add_user_script %>  add_user_script = <%= @add_user_script %><% end %>
+<% if @add_group_script %>  add_group_script = <%= @add_group_script %><% end %>
+<% if @add_machine_script %>  add_machine_script = <%= @add_machine_script %><% end %>
+<% if @delete_user_script %>  delete_user_script = <%= @delete_user_script %><% end %>
+<% if @delete_group_script %>  delete_group_script = <%= @delete_group_script %><% end %>
+<% if @delete_user_from_group_script %>  delete_user_from_group_script = <%= @delete_user_from_group_script %><% end %>
 	
 	
 # ----------------------- Browser Control Options ----------------------------
@@ -174,9 +174,9 @@
 #
 # Preferred Master causes Samba to force a local browser election on startup
 # and gives it a slightly higher chance of winning the election
-<% if @local_master %>  local_master = <%= @local_master %><% end -%>
-<% if @os_level %>  os_level = <%= @os_level %><% end -%>
-<% if @preferred_master %>  preferred_master = <%= @preferred_master %><% end -%>
+<% if @local_master %>  local_master = <%= @local_master %><% end %>
+<% if @os_level %>  os_level = <%= @os_level %><% end %>
+<% if @preferred_master %>  preferred_master = <%= @preferred_master %><% end %>
 	
 #----------------------------- Name Resolution -------------------------------
 # Windows Internet Name Serving Support Section:
@@ -193,10 +193,10 @@
 # DNS Proxy - tells Samba whether or not to try to resolve NetBIOS names
 # via DNS nslookups.
 	
-<% if @wins_support %>  wins_support = <%= @wins_support %><% end -%>
-<% if @wins_server %>  wins_server = <%= @wins_server %><% end -%>
-<% if @wins_proxy %>  wins_proxy = <%= @wins_proxy %><% end -%>
-<% if @dns_proxy %>  dns_proxy = <%= @dns_proxy %><% end -%>
+<% if @wins_support %>  wins_support = <%= @wins_support %><% end %>
+<% if @wins_server %>  wins_server = <%= @wins_server %><% end %>
+<% if @wins_proxy %>  wins_proxy = <%= @wins_proxy %><% end %>
+<% if @dns_proxy %>  dns_proxy = <%= @dns_proxy %><% end %>
 	
 # --------------------------- Printing Options -----------------------------
 #
@@ -213,8 +213,8 @@
 	load printers = <%= @load_printers %>
 	cups options = <%= @cups_options %>
 
-<% if @printcap_name %>  printcap_name = <%= @printcap_name %><% end -%>
-<% if @printing %>  printing = <%= @printing %><% end -%>
+<% if @printcap_name %>  printcap_name = <%= @printcap_name %><% end %>
+<% if @printing %>  printing = <%= @printing %><% end %>
 
 # --------------------------- Filesystem Options ---------------------------
 #
@@ -226,11 +226,11 @@
 # Note: these options can also be set just per share, setting them in global
 # makes them the default for all shares
 
-<% if @map_archive %>  map_archive = <%= @map_archive %><% end -%>
-<% if @map_hidden %>  map_hidden = <%= @map_hidden %><% end -%>
-<% if @map_read_only %>  map_read_only = <%= @map_read_only %><% end -%>
-<% if @map_system %>  map_system = <%= @map_system %><% end -%>
-<% if @store_dos_attributes %>  store_dos_attributes = <%= @store_dos_attributes %><% end -%>
+<% if @map_archive %>  map_archive = <%= @map_archive %><% end %>
+<% if @map_hidden %>  map_hidden = <%= @map_hidden %><% end %>
+<% if @map_read_only %>  map_read_only = <%= @map_read_only %><% end %>
+<% if @map_system %>  map_system = <%= @map_system %><% end %>
+<% if @store_dos_attributes %>  store_dos_attributes = <%= @store_dos_attributes %><% end %>
 
 #============================ Share Definitions ==============================
 	

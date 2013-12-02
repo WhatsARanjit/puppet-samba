@@ -20,7 +20,6 @@ Puppet::Type.type(:smb_share).provide(:smb_share) do
     echo("-e", "\"" + output + "\"", ">>", "/etc/samba/smbpasswd")
   end
 
-  # Might need to create my own resource hash
   resource.each do |k,v|
     param = k.to_s
     def k
