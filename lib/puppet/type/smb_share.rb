@@ -2,7 +2,10 @@ require 'pathname'
 Puppet::Type.newtype(:smb_share) do
   desc 'The smb_share type manages samba shares and their values'
   ensurable
-  newparam(:path, :namevar => true) do
+  newparam(:share, :namevar => true) do
+    desc 'The name of a samba share'
+  end
+  newparam(:path) do
     desc 'The location of a samba share'
     validate do |value|
       fail("Invalid path #{value}") unless Pathname.new(value).absolute?
